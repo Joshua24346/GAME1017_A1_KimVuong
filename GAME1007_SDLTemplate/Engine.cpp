@@ -3,6 +3,8 @@
 #include <ctime>
 using namespace std;
 
+Engine* Engine::engineInstance = nullptr;
+
 // Engine
 int Engine::Init(const char* title, int xPos, int yPos, int width, int height, int flags)
 {

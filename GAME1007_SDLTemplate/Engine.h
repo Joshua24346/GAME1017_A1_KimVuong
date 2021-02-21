@@ -18,6 +18,7 @@ protected:
 	SDL_Rect m_dest; // Destination rectangle
 
 public:
+
 	void SetRekts(const SDL_Rect s, const SDL_Rect d)
 	{
 		m_src = s;
@@ -127,6 +128,7 @@ class Engine
 private:
 	bool m_running = false;
 	int m_FrameC;
+	static Engine* engineInstance; // Storage Structure
 
 	//Player Status
 	bool m_status;
@@ -172,7 +174,18 @@ private:
 	void Sleep();
 
 public:
+
+	static Engine* Instance()
+	{
+		if (engineInstance == nullptr)
+		{
+			engineInstance = new Engine();
+		}
+		return engineInstance;
+	}
+
 	int Run();
 };
+typedef Engine TheEngine;
 #endif
 // Reminder: you can ONLY have declarations in headers, not logical code
