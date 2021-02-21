@@ -128,6 +128,8 @@ private:
 	bool m_running = false;
 	int m_FrameC;
 
+	Engine() {} // Prevents instantiation outside of the class
+
 	//Player Status
 	bool m_status;
 
@@ -160,19 +162,23 @@ private:
 	// Music
 	Mix_Music* m_BackgroundM; 
 
+	
 
 private:
 	int Init(const char* title, int xPos, int yPos, int width, int height, int flags);
 	void Clean();
 	void Wake();
 	void HandleEvents();
-	bool KeyDown(SDL_Scancode c);
 	void Update();
 	void Render();
 	void Sleep();
 
 public:
 	int Run();
+	//static Engine* Instance(); // Pointer way.
+	static Engine& Instance(); // Static method for object access.
+	SDL_Renderer* GetRenderer() { return m_pRenderer; }
+	bool KeyDown(SDL_Scancode c);
 };
 #endif
 // Reminder: you can ONLY have declarations in headers, not logical code
