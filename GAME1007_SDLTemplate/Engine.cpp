@@ -47,6 +47,9 @@ int Engine::Init(const char* title, int xPos, int yPos, int width, int height, i
 	// Sets volume - 0 to 128
 	Mix_VolumeMusic(128);
 
+	//
+	Mix_VolumeChunk(m_EnemyBulletS, 12);
+
 	m_FrameC = 0;
 	m_status = true;
 
@@ -396,12 +399,18 @@ void Engine::Render()
 	}
 
 	// Obstacles
-	for (int x = 0; x < m_Obstacles.size(); x++)
+	for (unsigned int x = 0; x < m_Obstacles.size(); x++)
 	{
 		SDL_RenderCopy(m_pRenderer, m_pObstacles, m_Obstacles[x]->GetSrc(), m_Obstacles[x]->GetDest());
 	}
 
 	SDL_RenderPresent(m_pRenderer);
+}
+
+Engine& Engine::Instance()
+{
+	static Engine instance; // Magic statics. Creating the object.
+	return instance;
 }
 
 // Engine Sleep
