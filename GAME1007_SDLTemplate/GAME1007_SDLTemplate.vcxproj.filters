@@ -35,6 +35,9 @@
     <ClInclude Include="Event.h">
       <Filter>Enums</Filter>
     </ClInclude>
+    <ClInclude Include="States.h">
+      <Filter>Enums</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\Downloads\Player.png">

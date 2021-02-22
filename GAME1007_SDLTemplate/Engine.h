@@ -9,6 +9,8 @@
 #include <iostream>
 #include <vector>
 #include <ctime>
+#include "States.h"
+
 using namespace std;
 
 class Sprite
@@ -162,6 +164,9 @@ private:
 	// Music
 	Mix_Music* m_BackgroundM; 
 
+	// Getters & Setters
+	void changeSceneState(States new_state);
+
 
 private:
 	int Init(const char* title, int xPos, int yPos, int width, int height, int flags);
@@ -172,6 +177,10 @@ private:
 	void Update();
 	void Render();
 	void Sleep();
+
+	//State Variables
+	States m_currentState;
+
 
 public:
 
