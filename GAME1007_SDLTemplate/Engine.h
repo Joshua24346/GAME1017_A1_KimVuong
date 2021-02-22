@@ -9,6 +9,8 @@
 #include <iostream>
 #include <vector>
 #include <ctime>
+#include "States.h"
+
 using namespace std;
 
 class Sprite
@@ -18,6 +20,7 @@ protected:
 	SDL_Rect m_dest; // Destination rectangle
 
 public:
+
 	void SetRekts(const SDL_Rect s, const SDL_Rect d)
 	{
 		m_src = s;
@@ -127,6 +130,7 @@ class Engine
 private:
 	bool m_running = false;
 	int m_FrameC;
+	static Engine* engineInstance; // Storage Structure
 
 	Engine() {} // Prevents instantiation outside of the class
 
@@ -162,7 +166,13 @@ private:
 	// Music
 	Mix_Music* m_BackgroundM; 
 
+<<<<<<< HEAD
 	
+=======
+	// Getters & Setters
+	void changeSceneState(States new_state);
+
+>>>>>>> StateEnum
 
 private:
 	int Init(const char* title, int xPos, int yPos, int width, int height, int flags);
@@ -173,12 +183,27 @@ private:
 	void Render();
 	void Sleep();
 
+	//State Variables
+	States m_currentState;
+
+
 public:
+
+	static Engine* Instance()
+	{
+		if (engineInstance == nullptr)
+		{
+			engineInstance = new Engine();
+		}
+		return engineInstance;
+	}
+
 	int Run();
 	//static Engine* Instance(); // Pointer way.
 	static Engine& Instance(); // Static method for object access.
 	SDL_Renderer* GetRenderer() { return m_pRenderer; }
 	bool KeyDown(SDL_Scancode c);
 };
+typedef Engine TheEngine;
 #endif
 // Reminder: you can ONLY have declarations in headers, not logical code

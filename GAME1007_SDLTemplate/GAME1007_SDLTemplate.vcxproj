@@ -147,8 +147,13 @@
     <ClCompile Include="States.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Buttons.h" />
     <ClInclude Include="Engine.h" />
+<<<<<<< HEAD
     <ClInclude Include="StateManager.h" />
+=======
+    <ClInclude Include="Event.h" />
+>>>>>>> StateEnum
     <ClInclude Include="States.h" />
   </ItemGroup>
   <ItemGroup>

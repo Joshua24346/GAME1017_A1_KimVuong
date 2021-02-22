@@ -3,6 +3,8 @@
 #include <ctime>
 using namespace std;
 
+Engine* Engine::engineInstance = nullptr;
+
 // Engine
 int Engine::Init(const char* title, int xPos, int yPos, int width, int height, int flags)
 {
@@ -443,6 +445,58 @@ int Engine::Run()
 	}
 	Clean();
 	return 0;
+}
+
+void Engine::changeSceneState(const States new_state)
+{
+	if (new_state != m_currentState) {
+
+		// scene clean up
+		if (m_currentState != NONE)
+		{
+			m_currentScene->clean();
+			std::cout << "cleaning previous scene" << std::endl;
+			FontManager::Instance()->clean();
+			std::cout << "cleaning FontManager" << std::endl;
+			TextureManager::Instance()->clean();
+			std::cout << "cleaning TextureManager" << std::endl;
+		}
+
+		m_currentScene = nullptr;
+
+		m_currentState = new_state;
+
+		EventManager::Instance().reset();
+
+		//Switch case that changes to the different states
+		switch (m_currentSceneState)
+		{
+		case START:
+			m_currentScene = new StartState();
+			std::cout << "Start state has been activated" << std::endl;
+			break;
+		case PLAY:
+			m_currentScene = new PlayState();
+			std::cout << "Play state has been activated" << std::endl;
+			break;
+		case PAUSE:
+			m_currentScene = new PauseState();
+			std::cout << "Pause state has been activated" << std::endl;
+			break;
+		case LOST:
+			m_currentScene = new LostState();
+			std::cout << "Lost state has been activated" << std::endl;
+			break;
+		case END:
+			m_currentScene = new EndScene();
+			std::cout << "End state has been activated" << std::endl;
+			break;
+		default:
+			std::cout << "Default State" << std::endl;
+			break;
+		}
+	}
+
 }
 
 // Cleaning Engine

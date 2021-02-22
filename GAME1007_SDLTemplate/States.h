@@ -1,4 +1,5 @@
 #pragma once
+<<<<<<< HEAD
 #ifndef _STATES_H_
 #define _STATES_H_
 
@@ -38,3 +39,19 @@ public:
 
 #endif
 
+=======
+#ifndef __STATES__
+#define __STATES__
+
+enum States {
+	NONE = -1,
+	START,
+	PAUSE,
+	PLAY,
+	LOST,
+	END
+};
+
+
+#endif
+>>>>>>> StateEnum
