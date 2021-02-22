@@ -47,7 +47,7 @@ int Engine::Init(const char* title, int xPos, int yPos, int width, int height, i
 	// Sets volume - 0 to 128
 	Mix_VolumeMusic(128);
 
-	//
+	// Sets volume 0 to 128 for sound effects
 	Mix_VolumeChunk(m_EnemyBulletS, 12);
 
 	m_FrameC = 0;
