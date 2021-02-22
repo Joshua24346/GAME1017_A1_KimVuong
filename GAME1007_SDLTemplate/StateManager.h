@@ -1,6 +1,6 @@
 #pragma once
-#ifndef _STATEMANAGER_H_
-#define _STATEMANAGER_H_
+#ifndef _STATE_MANAGER_
+#define _STATE_MANAGER_
 
 #include "States.h"
 #include <vector>

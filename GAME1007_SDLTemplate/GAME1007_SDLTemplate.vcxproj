@@ -147,7 +147,9 @@
     <ClCompile Include="States.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Buttons.h" />
     <ClInclude Include="Engine.h" />
+    <ClInclude Include="Event.h" />
     <ClInclude Include="StateManager.h" />
     <ClInclude Include="States.h" />
   </ItemGroup>

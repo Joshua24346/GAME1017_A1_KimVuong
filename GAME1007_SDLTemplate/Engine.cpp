@@ -48,7 +48,10 @@ int Engine::Init(const char* title, int xPos, int yPos, int width, int height, i
 	Mix_VolumeMusic(128);
 
 	//
-	Mix_VolumeChunk(m_EnemyBulletS, 12);
+	Mix_VolumeChunk(m_EnemyBulletS, 3);
+	Mix_VolumeChunk(m_PlayerBulletS, 12);
+	Mix_VolumeChunk(m_Hit, 3);
+	Mix_VolumeChunk(m_Explosion, 3);
 
 	m_FrameC = 0;
 	m_status = true;
