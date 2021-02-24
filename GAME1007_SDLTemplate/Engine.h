@@ -128,7 +128,7 @@ private:
 	bool m_running = false;
 	int m_FrameC;
 
-	Engine() {} // Prevents instantiation outside of the class
+	Engine() {}
 
 	//Player Status
 	bool m_status;

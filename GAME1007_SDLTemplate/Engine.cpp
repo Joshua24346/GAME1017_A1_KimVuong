@@ -431,7 +431,7 @@ int Engine::Run()
 	if (m_running == true)
 	{return 1;}
 
-	if (Init("Milestone 4", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, NULL) == false)
+	if (Init("GAME1017_A1_VuongKim ;)", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, NULL) == false)
 	{return 2;}
 
 	while (m_running == true)
@@ -449,7 +449,7 @@ int Engine::Run()
 }
 
 // Cleaning Engine
-void Engine::Clean(){
+void Engine::C lean(){
 
 	cout << "Cleaning engine..." << endl;
 	for (unsigned i = 0; i < m_PlayerBullets.size(); i++)

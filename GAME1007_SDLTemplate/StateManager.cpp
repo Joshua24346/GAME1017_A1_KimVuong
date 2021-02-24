@@ -1,26 +1,38 @@
 #include "StateManager.h"
 
-void StateManager::Update() // Invokes Update() of the current state
+void StateManager::Update()
 {
-	if (!s_states.empty())
-		s_states.back()->Update(); // s_states.back() represents the current state, by pointer
+	if (!s_states.empty()) // empty() and back() are methods of the vector type.
+		s_states.back()->Update();
 }
 
-void StateManager::Render() // Invokes Render() of the current state
+void StateManager::Render()
 {
 	if (!s_states.empty())
 		s_states.back()->Render();
 }
 
-void StateManager::PushState(State* pState) // Invoked going to PauseState from GameState
+void StateManager::PushState(State* pState)
 {
-	s_states.push_back(pState);
+	s_states.push_back(pState); // push_back() is a method of the vector type.
 	s_states.back()->Enter();
 }
 
-void StateManager::PopState() // Invoked going back to GameState from PauseState
+void StateManager::ChangeState(State* pState)
 {
-	if (s_states.size() <= 1) return; // If only one state in vector, return
+	if (!s_states.empty())
+	{
+		s_states.back()->Exit();
+		delete s_states.back(); // De-allocating the state in the heap.
+		s_states.back() = nullptr; // Nullifying pointer to the de-allocated state.
+		s_states.pop_back(); // Removes the now-null pointer from the vector.
+	}
+	pState->Enter();
+	s_states.push_back(pState);
+}
+
+void StateManager::PopState()
+{
 	if (!s_states.empty())
 	{
 		s_states.back()->Exit();
@@ -31,26 +43,10 @@ void StateManager::PopState() // Invoked going back to GameState from PauseState
 	s_states.back()->Resume();
 }
 
-void StateManager::ChangeState(State* pState)
-{
-	if (!s_states.empty())
-	{
-		s_states.back()->Exit();
-		delete s_states.back();
-		s_states.back() = nullptr;
-		s_states.pop_back();
-	}
-	pState->Enter();
-	s_states.push_back(pState);
-	/* or, this may be a little more elegant:
-	s_states.push_back(pState);
-	s_states.back()->Enter(); */
-}
-
 void StateManager::Quit()
 {
-	while (!s_states.empty())
-	{
+	while (!s_states.empty())	// Because we can exit the game in the pause state with the window's 'X'.
+	{							// Ensures that ALL states left in the vector are cleaned up.
 		s_states.back()->Exit();
 		delete s_states.back();
 		s_states.back() = nullptr;
