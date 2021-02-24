@@ -2,42 +2,48 @@
 #ifndef _STATES_
 #define _STATES_
 
-class State // This is the abstract base class for all states
+class State // This is the abstract base class for all specific states.
 {
+protected:
+	State() {}
 public:
-	virtual void Enter() = 0; // = 0 means pure virtual - must be defined in subclass
-	virtual void Update() = 0;
-	virtual void Render();
+	virtual void Update() = 0; // Having at least one 'pure virtual' method like this, makes a class abtract.
+	virtual void Render();     // Meaning we cannot create objects of the class.
+	virtual void Enter() = 0;  // Virtual keyword means we can override in derived class.
 	virtual void Exit() = 0;
 	virtual void Resume();
-	virtual ~State() = default; // Modern alternative to {}
-protected: // Private but inherited
-	State() {}; // What does this prevent?
+};
+
+class GameState : public State
+{
+private:
+	SDL_Texture* m_pTileText;
+	std::map<char, Tile*> m_tiles;
+	std::array<std::array<Tile*, COLS>, ROWS> m_level; // Fixed-size STL array of Tile pointers.
+	std::vector<Tile*> m_platforms;
+	PlatformPlayer* m_pPlayer;
+	bool m_bgScrollX = false, m_bgScrollY = false;
+public:
+	GameState();
+	void Update();
+	void UpdateTiles(float scroll, bool x = false);
+	void CheckCollision();
+	void Render();
+	void Enter();
+	void Exit();
+	void Resume();
 };
 
 class TitleState : public State
 {
 public:
 	TitleState();
-	virtual void Enter();
-	virtual void Update();
-	virtual void Render();
-	virtual void Exit();
-	Button* m_pStartButton;
-	Button* m_pExitButton;
-
-};
-
-class GameState : public State
-{
-public:
-	GameState();
-	virtual void Enter();
-	virtual void Update();
-	virtual void Render();
-	virtual void Exit();
-	virtual void Resume();
-	Button* m_pPauseButton;
+	void Update();
+	void Render();
+	void Enter();
+	void Exit();
+private:
+	Button* m_playBtn;
 };
 
 enum States {

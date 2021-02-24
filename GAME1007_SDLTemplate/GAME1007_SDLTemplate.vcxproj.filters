@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
@@ -13,19 +9,47 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Managers">
+      <UniqueIdentifier>{a7a667d8-4bcb-4ad8-9e47-56197fa92ac4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>States</Filter>
     </ClCompile>
     <ClCompile Include="Engine.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>States</Filter>
     </ClCompile>
     <ClCompile Include="States.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>States</Filter>
     </ClCompile>
     <ClCompile Include="StateManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\FontManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\StateManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\TextureManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\CollisionManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\DebugManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\EventManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\GAME1017_ShooterExample\GAME1017_ShooterExample\Sprites.cpp">
+      <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -44,19 +68,29 @@
     <ClInclude Include="Event.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\..\Downloads\Player.png">
+    <ClInclude Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\FontManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\StateManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\TextureManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\CollisionManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\DebugManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\EventManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\GAME1017_ShooterExample\GAME1017_ShooterExample\Sprites.h">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="..\..\..\Downloads\Enemy.png">
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\GAME1017_ShooterExample\GAME1017_ShooterExample\Utilities.h">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="..\..\..\Downloads\Background_1.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="..\..\..\..\..\Downloads\Log.png">
-      <Filter>Resource Files</Filter>
-    </Image>
+    </ClInclude>
   </ItemGroup>
 </Project>
