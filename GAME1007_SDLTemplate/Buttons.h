@@ -2,7 +2,7 @@
 #ifndef __BUTTONS__ 
 #define __BUTTONS__ 
 
-enum Buttons {
+enum Button {
 	NONE = -1,
 	START,
 	BACK,
@@ -14,37 +14,8 @@ enum Buttons {
 
 #endif //  
 
-/* Start State
+ 
 
-Button* m_pStartButton
-Button* m_pExitButton
-
-	// Start Button
-	m_pStartButton = new Button("../Assets/textures/startButton.png", "startButton", START);
-	m_pStartButton->getTransform()->position = glm::vec2(400.0f, 400.0f);
-
-	// Exit Button
-	m_pExitButton = new Button("../Assets/textures/exitButton.png", "exitButton", EXIT);
-	m_pExitButton->getTransform()->position = glm::vec2(400.0f, 300.0f);
-
-	m_pStartButton->addEventListener(CLICK, [&]()-> void
-	{
-		m_pStartButton->setActive(false);
-		TheEngine::engineInstance()->changeSceneState(PLAY_SCENE);
-	});
-
-	m_pStartButton->addEventListener(MOUSE_OVER, [&]()->void
-	{
-		m_pStartButton->setAlpha(128);
-	});
-
-	m_pStartButton->addEventListener(MOUSE_OUT, [&]()->void
-	{
-		m_pStartButton->setAlpha(255);
-	});
-	addChild(m_pStartButton);
-
-*/
 
 /* Pause State
 

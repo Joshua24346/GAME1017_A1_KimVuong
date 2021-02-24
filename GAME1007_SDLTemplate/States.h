@@ -23,6 +23,9 @@ public:
 	virtual void Update();
 	virtual void Render();
 	virtual void Exit();
+	Button* m_pStartButton;
+	Button* m_pExitButton;
+
 };
 
 class GameState : public State
@@ -34,6 +37,7 @@ public:
 	virtual void Render();
 	virtual void Exit();
 	virtual void Resume();
+	Button* m_pPauseButton;
 };
 
 enum States {

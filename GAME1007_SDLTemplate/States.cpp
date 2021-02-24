@@ -2,6 +2,7 @@
 #include "StateManager.h"
 #include "Engine.h"
 #include <iostream>
+#include "Buttons.h"
 using namespace std;
 
 void State::Render()
@@ -31,6 +32,33 @@ void TitleState::Render()
 	SDL_SetRenderDrawColor(Engine::Instance().GetRenderer(), 255, 0, 255, 255);
 	SDL_RenderClear(Engine::Instance().GetRenderer());
 	State::Render();
+	
+	m_pStartButton = new Button("../Assets/textures/startButton.png", "startButton", START);
+	m_pStartButton->getTransform()->position = glm::vec2(400.0f, 400.0f);
+
+	Exit Button
+		m_pExitButton = new Button("../Assets/textures/exitButton.png", "exitButton", EXIT);
+	m_pExitButton->getTransform()->position = glm::vec2(400.0f, 300.0f);
+
+	m_pStartButton->addEventListener(CLICK, [&]()-> void
+		{
+			m_pStartButton->setActive(false);
+			TheEngine::engineInstance()->changeSceneState(PLAY_SCENE);
+		});
+
+	m_pStartButton->addEventListener(MOUSE_OVER, [&]()->void
+		{
+			m_pStartButton->setAlpha(128);
+		});
+
+	m_pStartButton->addEventListener(MOUSE_OUT, [&]()->void
+		{
+			m_pStartButton->setAlpha(255);
+		});
+	addChild(m_pStartButton);
+
+
+
 }
 
 void TitleState::Exit()
@@ -38,6 +66,11 @@ void TitleState::Exit()
 	cout << "Exiting TitleState..." << endl;
 }
 // End TitleState
+
+
+
+
+
 
 // Begin GameState
 GameState::GameState() {}
