@@ -27,9 +27,6 @@
     <ClCompile Include="States.cpp">
       <Filter>States</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\GAME1017_ShooterExample\GAME1017_ShooterExample\Sprites.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
     <ClCompile Include="StateManager.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
@@ -49,12 +46,6 @@
     </ClInclude>
     <ClInclude Include="Event.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\GAME1017_ShooterExample\GAME1017_ShooterExample\Sprites.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\GAME1017_ShooterExample\GAME1017_ShooterExample\Utilities.h">
-      <Filter>Resource Files</Filter>
     </ClInclude>
     <ClInclude Include="EventManager.h">
       <Filter>Managers</Filter>

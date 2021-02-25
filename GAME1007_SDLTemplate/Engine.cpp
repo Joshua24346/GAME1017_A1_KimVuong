@@ -449,7 +449,7 @@ int Engine::Run()
 }
 
 // Cleaning Engine
-void Engine::C lean(){
+void Engine::Clean(){
 
 	cout << "Cleaning engine..." << endl;
 	for (unsigned i = 0; i < m_PlayerBullets.size(); i++)

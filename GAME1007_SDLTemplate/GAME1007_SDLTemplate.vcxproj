@@ -141,7 +141,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\GAME1017_ShooterExample\GAME1017_ShooterExample\Sprites.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="EventManager.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -149,8 +148,6 @@
     <ClCompile Include="States.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\GAME1017_ShooterExample\GAME1017_ShooterExample\Sprites.h" />
-    <ClInclude Include="..\..\..\..\..\GAME1017_ShooterExample\GAME1017_ShooterExample\Utilities.h" />
     <ClInclude Include="Buttons.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Event.h" />

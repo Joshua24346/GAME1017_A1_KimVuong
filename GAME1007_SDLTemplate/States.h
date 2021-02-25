@@ -1,6 +1,6 @@
 #pragma once
-#ifndef _STATES_H_
-#define _STATES_H_
+#ifndef _STATES_
+#define _STATES_
 
 class State // This is the abstract base class for all states
 {
