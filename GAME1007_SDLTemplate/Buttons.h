@@ -2,7 +2,6 @@
 #ifndef _BUTTON_H_
 #define _BUTTON_H_
 
-#include "Sprite.h"
 #include <SDL.h>
 
 // Button will be an example of the command design pattern.

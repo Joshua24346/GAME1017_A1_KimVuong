@@ -45,13 +45,13 @@ int Engine::Init(const char* title, int xPos, int yPos, int width, int height, i
 	Mix_PlayMusic(m_BackgroundM, -1); 
 
 	// Sets volume - 0 to 128
-	Mix_VolumeMusic(128);
+	Mix_VolumeMusic(64);
 
-	//
-	Mix_VolumeChunk(m_EnemyBulletS, 3);
+	// Sound Effect Volume
+	Mix_VolumeChunk(m_EnemyBulletS, 2);
 	Mix_VolumeChunk(m_PlayerBulletS, 12);
-	Mix_VolumeChunk(m_Hit, 3);
-	Mix_VolumeChunk(m_Explosion, 3);
+	Mix_VolumeChunk(m_Hit, 5);
+	Mix_VolumeChunk(m_Explosion, 5);
 
 	m_FrameC = 0;
 	m_status = true;
@@ -449,7 +449,7 @@ int Engine::Run()
 }
 
 // Cleaning Engine
-void Engine::C lean(){
+void Engine::Clean(){
 
 	cout << "Cleaning engine..." << endl;
 	for (unsigned i = 0; i < m_PlayerBullets.size(); i++)

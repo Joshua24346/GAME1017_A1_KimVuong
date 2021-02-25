@@ -1,6 +1,6 @@
 #pragma once
-#ifndef _STATES_
-#define _STATES_
+#ifndef _STATES_H_
+#define _STATES_H_
 
 class State // This is the abstract base class for all specific states.
 {
@@ -16,13 +16,6 @@ public:
 
 class GameState : public State
 {
-private:
-	SDL_Texture* m_pTileText;
-	std::map<char, Tile*> m_tiles;
-	std::array<std::array<Tile*, COLS>, ROWS> m_level; // Fixed-size STL array of Tile pointers.
-	std::vector<Tile*> m_platforms;
-	PlatformPlayer* m_pPlayer;
-	bool m_bgScrollX = false, m_bgScrollY = false;
 public:
 	GameState();
 	void Update();
@@ -43,7 +36,7 @@ public:
 	void Enter();
 	void Exit();
 private:
-	Button* m_playBtn;
+	// Button* m_playBtn;
 };
 
 enum States {
