@@ -30,27 +30,6 @@
     <ClCompile Include="StateManager.cpp">
       <Filter>States</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\FontManager.cpp">
-      <Filter>Managers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\StateManager.cpp">
-      <Filter>Managers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\TextureManager.cpp">
-      <Filter>Managers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\CollisionManager.cpp">
-      <Filter>Managers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\DebugManager.cpp">
-      <Filter>Managers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\EventManager.cpp">
-      <Filter>Managers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\GAME1017_ShooterExample\GAME1017_ShooterExample\Sprites.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
@@ -67,30 +46,6 @@
     </ClInclude>
     <ClInclude Include="Event.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\FontManager.h">
-      <Filter>Managers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\StateManager.h">
-      <Filter>Managers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\TextureManager.h">
-      <Filter>Managers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\CollisionManager.h">
-      <Filter>Managers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\DebugManager.h">
-      <Filter>Managers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_W0X_ScrollingTiledPlatformer\GAME1017_Template_W01\EventManager.h">
-      <Filter>Managers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\GAME1017_ShooterExample\GAME1017_ShooterExample\Sprites.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\GAME1017_ShooterExample\GAME1017_ShooterExample\Utilities.h">
-      <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
