@@ -2,51 +2,49 @@
 #ifndef _STATES_H_
 #define _STATES_H_
 
-class State // This is the abstract base class for all specific states.
+class State // This is the abstract base class for all states
 {
-protected:
-	State() {}
 public:
-	virtual void Update() = 0; // Having at least one 'pure virtual' method like this, makes a class abtract.
-	virtual void Render();     // Meaning we cannot create objects of the class.
-	virtual void Enter() = 0;  // Virtual keyword means we can override in derived class.
+	virtual void Enter() = 0; // = 0 means pure virtual - must be defined in subclass
+	virtual void Update() = 0;
+	virtual void Render();
 	virtual void Exit() = 0;
 	virtual void Resume();
-};
-
-class GameState : public State
-{
-public:
-	GameState();
-	void Update();
-	void UpdateTiles(float scroll, bool x = false);
-	void CheckCollision();
-	void Render();
-	void Enter();
-	void Exit();
-	void Resume();
+	virtual ~State() = default; // Modern alternative to {}
+protected: // Private but inherited
+	State() {}; // What does this prevent?
 };
 
 class TitleState : public State
 {
 public:
 	TitleState();
-	void Update();
-	void Render();
-	void Enter();
-	void Exit();
-private:
-	// Button* m_playBtn;
+	virtual void Enter();
+	virtual void Update();
+	virtual void Render();
+	virtual void Exit();
 };
 
-enum States {
-	NONE = -1,
-	START,
-	PAUSE,
-	PLAY,
-	LOST,
-	END
+class GameState : public State
+{
+public:
+	GameState();
+	virtual void Enter();
+	virtual void Update();
+	virtual void Render();
+	virtual void Exit();
+	virtual void Resume();
 };
 
+class PauseState : public State
+{
+public:
+	PauseState();
+	virtual void Enter();
+	virtual void Update();
+	virtual void Render();
+	virtual void Exit();
+	virtual void Resume();
+};
 #endif
 

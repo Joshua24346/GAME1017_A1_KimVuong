@@ -179,6 +179,7 @@ public:
 	static Engine& Instance(); // Static method for object access.
 	SDL_Renderer* GetRenderer() { return m_pRenderer; }
 	bool KeyDown(SDL_Scancode c);
+	bool& Running();
 };
 #endif
 // Reminder: you can ONLY have declarations in headers, not logical code
