@@ -1,14 +1,15 @@
 #pragma once
-#ifndef _STATE_MANAGER_
-#define _STATE_MANAGER_
+#ifndef _STATEMANAGER_H_
+#define _STATEMANAGER_H_
 
 #include "States.h"
 #include <vector>
 
 class StateManager
 {
-public: // Public properties
+private: // Public properties
 	static std::vector<State*> s_states;
+	static bool s_stateChange;
 
 public: // Public methods
 	static void Update();
@@ -18,6 +19,7 @@ public: // Public methods
 	static void ChangeState(State* pState);
 	static void Quit(); // Used for cleanup
 	static std::vector<State*>& GetStates(); // returns a reference to our State* vector
+	static const bool StateChanging();
 
 private: // Private methods
 	StateManager() {}

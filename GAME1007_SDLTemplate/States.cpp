@@ -40,6 +40,7 @@ void TitleState::Exit()
 }
 // End TitleState
 
+
 // Begin GameState
 GameState::GameState() {}
 

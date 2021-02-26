@@ -28,7 +28,14 @@
       <Filter>States</Filter>
     </ClCompile>
     <ClCompile Include="StateManager.cpp">
+<<<<<<< HEAD
       <Filter>States</Filter>
+=======
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="EventManager.cpp">
+      <Filter>Managers</Filter>
+>>>>>>> realmaster
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -38,14 +45,20 @@
     <ClInclude Include="States.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="StateManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Buttons.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Event.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
+=======
+    <ClInclude Include="EventManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="StateManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+>>>>>>> realmaster
   </ItemGroup>
 </Project>
